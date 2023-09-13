@@ -5,6 +5,7 @@ Highly maintained, up-to-date and cheapest TikTok signature/encryption service, 
 ## Supported signature/encryption features: 支持的签名/加密功能：
 
 ⭐ TikTok Mobile Signature
+TikTok 手机签名
 
 - X-Argus
 - X-Ladon
@@ -12,18 +13,21 @@ Highly maintained, up-to-date and cheapest TikTok signature/encryption service, 
 - X-Khronos
 
 ⭐ TikTok Web Signature
+TikTok 网络签名
 
 - MSToken
 - _signature
 - X-Bogus
 
 ⭐ Device Registration
+设备注册
 
 - TTEncrypt
 - MSSDK encrypt/decrypt
 - MSSDK /ri/report
 
 ⭐ TikTok Api Endpoint
+TikTok Api 端点
 
 - Follow
 - Commit
@@ -35,6 +39,7 @@ Highly maintained, up-to-date and cheapest TikTok signature/encryption service, 
 - ...
 
 ⭐ TikTok Captcha Solver
+TikTok 验证码解算器
 
 - Slide solver
 - Rotate solver
