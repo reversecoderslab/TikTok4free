@@ -22,6 +22,7 @@ Highly maintained, up-to-date and cheapest TikTok signature/encryption service, 
 - TTEncrypt
 - MSSDK encrypt/decrypt
 - MSSDK /ri/report
+- Get seed
 
 ⭐ TikTok Api Endpoint 端点
 
