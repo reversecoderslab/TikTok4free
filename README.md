@@ -47,4 +47,5 @@ Gmail: reversecoders@gmail.com <br>
 Telegram: https://t.me/reversecoders <br>
 Website: https://tt-free.de/ <br>
 Rapidapi: https://rapidapi.com/reversecoders/api/tiktok4free <br>
-GitHub: https://github.com/reversecoders/TikTok4free
+GitHub: https://github.com/reversecoders/TikTok4free  <br>
+Gitlab: https://gitlab.com/reversecoders/TikTok4free
