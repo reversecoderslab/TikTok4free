@@ -29,9 +29,9 @@ def get_other_user_profile(session, dev_info, account_info, to_user_id, to_sec_u
 
 if __name__ == "__main__":
     # -------- START ONLY CHANGE HERE -------- #
-    #proxy = None
-    token = ''.join(choices('0123456789abcdefghiklmnopqrstuvwxyz', k=8))
-    proxy = f'xxx:xxx_country-{random.choice(["de", "en", "cz", "es", "it"])}_session-{token}_lifetime-5m@geo.iproyal.com:12321'
+    proxy = None
+    #token = ''.join(choices('0123456789abcdefghiklmnopqrstuvwxyz', k=8))
+    #proxy = f'xxx:xxx_country-{random.choice(["de", "en", "cz", "es", "it"])}_session-{token}_lifetime-5m@geo.iproyal.com:12321'
 
     get_user_profile = None
     # -------- END ONLY CHANGE HERE -------- #
