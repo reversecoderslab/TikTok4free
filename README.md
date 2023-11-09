@@ -60,6 +60,8 @@ You can also contact me on WeChat: 您也可以通过微信联系我：
 
 - Update MSSDK version to v05.00.01-alpha.7-ov-android 将MSSDK版本更新为v05.00.01-alpha.7-ov-android
 - Update app version to 32.1.2 将应用程序版本更新至32.1.2
+- Update X-Argus 更新 X-阿格斯
+- Update Device Template 更新设备模板
 
 11/01/23
 
