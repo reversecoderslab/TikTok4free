@@ -53,3 +53,23 @@ GitLab: https://gitlab.com/reversecoders/TikTok4free
 You can also contact me on WeChat: 您也可以通过微信联系我：
 
 <img src="https://i.ibb.co/GFGkLmQ/wechat.jpg" width="202" height="284" />
+
+## Release Notes: 发行说明:
+
+11/9/23
+
+- Update MSSDK version to v05.00.01-alpha.7-ov-android 将MSSDK版本更新为v05.00.01-alpha.7-ov-android
+- Update app version to 32.1.2 将应用程序版本更新至32.1.2
+
+11/01/23
+
+- Update MSSDK version to v05.00.00-ov-android 将 MSSDK 版本更新至 v05.00.00-ov-android
+- Update app version to 32.0.2 将应用程序版本更新至32.0.2
+
+10/24/23
+
+- New endpoints: Manual encryption and decryption MSSDK 新端点：手动加密和解密MSSDK
+
+10/01/23
+
+- Go Live 上线
