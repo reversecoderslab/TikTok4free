@@ -56,6 +56,10 @@ You can also contact me on WeChat: 您也可以通过微信联系我：
 
 ## Release Notes: 发行说明:
 
+11/11/23
+
+- Update app version to 32.1.4 将应用程序版本更新至32.1.4
+
 11/9/23
 
 - Update MSSDK version to v05.00.01-alpha.7-ov-android 将MSSDK版本更新为v05.00.01-alpha.7-ov-android
