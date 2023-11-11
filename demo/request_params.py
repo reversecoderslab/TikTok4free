@@ -48,9 +48,11 @@ def generate_url_common_params(dev_info, extra={}):
 
 def generate_common_header_info(dev_info):
     return {
+        "x-tt-request-tag": "t=0;n=1",
+        "accept": "*/*",
         'sdk-version': '2',
         'user-agent': dev_info["userAgent"],
-        'x-vc-bdturing-sdk-version': '2.2.0',
+        'x-vc-bdturing-sdk-version': '2.3.4.i18n',
         'x-tt-dm-status': 'login=1;ct=1;rt=1',
         'passport-sdk-version': '5.12.1',
         'x-bd-kmsv': '0',
