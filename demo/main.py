@@ -58,6 +58,16 @@ if __name__ == "__main__":
     dev_info['cookies'] = cookie_to_str(r.cookies.get_dict(), None)
     printf(f'\n==== END REGISTER DEVICE ====')
 
+    printf("\n==== START GET SEED ====")
+    obj = device.get_seed()
+    try:
+        dev_info["seed"] = obj['data']['seed']
+        dev_info["seedAlgorithm"] = obj['algorithm']
+    except:
+        printf('No seed')
+        raise ('No seed')
+    printf("\n==== END GET SEED ====")
+
     printf(f'\n==== START APP ALERT CHECK ====')
     device.send_app_alert_check()
     printf(f'\n==== END APP ALERT CHECK ====')
@@ -70,16 +80,6 @@ if __name__ == "__main__":
     dev_info["secDeviceIdToken"] = token
     device.post_ri_report()
     printf("\n==== END ri/report ====")
-
-    printf("\n==== START GET SEED ====")
-    obj = device.get_seed()
-    try:
-        dev_info["seed"] = obj['data']['seed']
-        dev_info["seedAlgorithm"] = obj['algorithm']
-    except:
-        printf('No seed')
-        raise ('No seed')
-    printf("\n==== END GET SEED ====")
 
     printf("\n==== START DEVICE INFO ====")
     printf(dev_info)
