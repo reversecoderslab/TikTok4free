@@ -20,7 +20,7 @@ def tt_common_post_request(session, dev_info, account_info, host, url, body=None
     x_ladon, x_argus, x_gorgon, x_khronos, x_ss_stub = do_sign_v5(dev_info, int(timestamp_ms / 1000), query_str, body=body)
     headers = generate_common_header_info(dev_info)
     headers |= {
-        'content-type': 'application/json',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'x-ss-stub': x_ss_stub,
         'X-Khronos': x_khronos,
         'X-Gorgon': x_gorgon,
@@ -61,7 +61,7 @@ def tt_common_get_request(session, dev_info, account_info, host, url, extra={}):
     x_ladon, x_argus, x_gorgon, x_khronos, x_ss_stub = do_sign_v5(dev_info, int(timestamp_ms / 1000), query_str)
     headers = generate_common_header_info(dev_info)
     headers |= {
-        'content-type': 'application/x-www-form-urlencoded',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'X-Khronos': x_khronos,
         'X-Gorgon': x_gorgon,
         "X-Argus": x_argus,
