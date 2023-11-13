@@ -34,6 +34,7 @@ class DeviceRegister:
         self.dev_info["gaId"] = str(uuid1())
         self.dev_info["reqId"] = str(uuid1())
         self.dev_info["IMEI"] = str(random.randint(300000000000000, 394601551608653))
+        self.dev_info["mac"] = ':'.join([f'{random.randint(0, 255):02X}' for _ in range(6)])
 
         dev_locals = gen_locals(self.proxy)["data"]
 
