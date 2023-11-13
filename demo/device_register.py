@@ -33,6 +33,7 @@ class DeviceRegister:
         self.dev_info["androidId"] = rand_str(20)
         self.dev_info["gaId"] = str(uuid1())
         self.dev_info["reqId"] = str(uuid1())
+        self.dev_info["IMEI"] = str(random.randint(300000000000000, 394601551608653))
 
         dev_locals = gen_locals(self.proxy)["data"]
 
