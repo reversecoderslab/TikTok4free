@@ -2,6 +2,7 @@ import base64
 import binascii
 import json
 import time
+import random
 from uuid import uuid1
 
 from api import do_get_dev_tmpl, get_device_register_body, do_sign_v5, gen_locals, encrypt_get_token, decrypt_get_token, \
