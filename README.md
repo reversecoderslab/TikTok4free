@@ -47,7 +47,7 @@ Gmail: reversecoders@gmail.com <br>
 Telegram: https://t.me/reversecoders <br>
 Website: https://tt-free.de/ <br>
 Rapidapi: https://rapidapi.com/reversecoders/api/tiktok4free <br>
-GitHub: https://github.com/reversecoders2/TikTok4free  <br>
+GitHub: https://github.com/reversecoderslab/TikTok4free  <br>
 GitLab: https://gitlab.com/reversecoders/TikTok4free
 
 You can also contact me on WeChat: 您也可以通过微信联系我：
