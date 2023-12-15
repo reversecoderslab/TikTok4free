@@ -56,6 +56,10 @@ You can also contact me on WeChat: 您也可以通过微信联系我：
 
 ## Release Notes: 发行说明:
 
+12/15/23:
+
+- Update app version to 32.6.1 将应用程序版本更新至32.6.1
+
 12/03/23:
 
 - Update app version to 32.4.3 将应用程序版本更新至32.4.3
