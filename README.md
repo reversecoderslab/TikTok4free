@@ -59,6 +59,7 @@ You can also contact me on WeChat: 您也可以通过微信联系我：
 12/15/23:
 
 - Update app version to 32.6.1 将应用程序版本更新至32.6.1
+- Update MSSDK version to v05.00.03-alpha.16-ov-android 将MSSDK版本更新为v05.00.03-alpha.16-ov-android
 
 12/03/23:
 
