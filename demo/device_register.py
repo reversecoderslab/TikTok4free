@@ -3,7 +3,7 @@ import binascii
 import json
 import time
 import random
-from uuid import uuid1
+from uuid import uuid1, uuid4
 
 from api import do_get_dev_tmpl, get_device_register_body, do_sign_v5, gen_locals, encrypt_get_token, decrypt_get_token, \
     encrypt_get_seed, decrypt_get_seed, encrypt_get_report
