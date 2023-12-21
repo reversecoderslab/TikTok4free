@@ -10,6 +10,7 @@ Highly maintained, up-to-date and cheapest TikTok signature/encryption service, 
 - X-Ladon
 - X-Gorgon
 - X-Khronos
+- X-Cylons
 
 ⭐ TikTok Web Signature 网络签名
 
