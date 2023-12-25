@@ -57,6 +57,10 @@ You can also contact me on WeChat: 您也可以通过微信联系我：
 
 ## Release Notes: 发行说明:
 
+12/25/23:
+
+- Update app version to 32.7.5 将应用程序版本更新至32.7.5
+
 12/21/23:
 
 - Add X-Cylons support 添加 X-Cylons 支持
