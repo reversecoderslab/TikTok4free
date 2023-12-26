@@ -38,9 +38,7 @@ Highly maintained, up-to-date and cheapest TikTok signature/encryption service, 
 
 ⭐ TikTok Captcha Solver 验证码解算器
 
-- Slide solver
-- Rotate solver
-- Objects solver
+https://rapidapi.com/reversecoders/api/flycaptcha/
 
 ## Contact: 接触：
 
