@@ -1,3 +1,5 @@
+# Support: (Discord server: https://discord.gg/qDDSzY9TPP)
+
 import random
 from random import choices
 
