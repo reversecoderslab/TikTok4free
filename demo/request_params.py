@@ -42,6 +42,8 @@ def generate_url_common_params(dev_info, extra={}):
         "timezone_offset": dev_info["timezoneOffset"],
         "update_version_code": str(dev_info["updateVersionCode"]),
         "manifest_version_code": str(dev_info["manifestVersionCode"]),
+        "carrier_region_v2": dev_info["carrierRegionv2"],
+        "mcc_mnc": dev_info["mcc_mnc"]
     }
     return urllib.parse.urlencode(url_params | extra)
 
@@ -55,7 +57,7 @@ def generate_common_header_info(dev_info):
         'x-vc-bdturing-sdk-version': '2.3.4.i18n',
         'x-tt-dm-status': 'login=0;ct=0;rt=7',
         'x-tt-request-tag': 't=0;n=1',
-        'passport-sdk-version': '5.12.1',
+        'passport-sdk-version': '19',
         'x-bd-kmsv': '0',
         'x-ss-dp': dev_info["appId"],
         'x-tt-trace-id': get_trace_id(dev_info["appId"], dev_info["deviceId"]),
