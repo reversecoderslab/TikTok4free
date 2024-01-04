@@ -24,6 +24,7 @@ Highly maintained, up-to-date and cheapest TikTok signature/encryption service, 
 - MSSDK encrypt/decrypt
 - MSSDK /ri/report
 - Get seed
+- MSCC Common Setting
 
 ⭐ TikTok Api Endpoint 端点
 
@@ -54,6 +55,11 @@ You can also contact me on WeChat: 您也可以通过微信联系我：
 <img src="https://i.ibb.co/GFGkLmQ/wechat.jpg" width="202" height="284" />
 
 ## Release Notes: 发行说明:
+
+01/04/24:
+
+- Update app version to 32.9.1 将应用程序版本更新至32.9.1
+- Add MSSDK MSCC Common Setting Endpoint 添加MSSDK MSCC通用设置端点
 
 01/03/24:
 
