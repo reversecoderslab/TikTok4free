@@ -6,6 +6,7 @@ from device_register import DeviceRegister
 from domains import DOMAIN_CORE
 from request_tiktok import tt_common_get_request
 from utils import printf, cookie_to_str
+import time
 
 
 def get_other_user_profile(session, dev_info, account_info, to_user_id, to_sec_user_id):
@@ -41,6 +42,10 @@ if __name__ == "__main__":
         session.proxies = {'http': f'http://{proxy}', 'https': f'http://{proxy}'}
 
     device = DeviceRegister(proxy=proxy, session=session)
+
+    timestamp_ms = round(time.time() * 1000)
+    timestamp = timestamp_ms // 1000
+    dev_info['launchFirstTime'] = str(timestamp)
 
     printf(f'\n==== START GET DEVICE TEMPLATE ====')
     device.process_dev_info()
