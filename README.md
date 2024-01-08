@@ -49,10 +49,6 @@ Rapidapi: https://rapidapi.com/reversecoders/api/tiktok4free <br>
 GitHub: https://github.com/reversecoderslab/TikTok4free  <br>
 GitLab: https://gitlab.com/reversecoders/TikTok4free
 
-You can also contact me on WeChat: 您也可以通过微信联系我：
-
-<img src="https://i.ibb.co/GFGkLmQ/wechat.jpg" width="202" height="284" />
-
 ## Release Notes: 发行说明:
 
 01/04/24:
