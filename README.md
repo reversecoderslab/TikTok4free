@@ -45,7 +45,6 @@ https://rapidapi.com/reversecoders/api/flycaptcha/
 
 Gmail: reversecoders@gmail.com <br>
 Telegram: https://t.me/reversecoders <br>
-Website: https://tt-free.de/ <br>
 Rapidapi: https://rapidapi.com/reversecoders/api/tiktok4free <br>
 GitHub: https://github.com/reversecoderslab/TikTok4free  <br>
 GitLab: https://gitlab.com/reversecoders/TikTok4free
