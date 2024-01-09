@@ -45,11 +45,11 @@ Finally, you can get three important id:
 ## 步
 
 1. `git 克隆 https://gitlab.com/reversecoders/TikTok4free.git`
-2.`cd TikTok4free/演示`
-3.将key.py中的密钥替换为我们申请的测试密钥。
+2. `cd TikTok4free/演示`
+3. 将key.py中的密钥替换为我们申请的测试密钥。
 4. `python3 main.py` # 启动android/ios设备注册和激活demo，可以获得device_id和install_id
-5.您可以自行更改设备信息和应用程序信息，生成新的did和iid；
-6.玩得开心！
+5. 您可以自行更改设备信息和应用程序信息，生成新的did和iid；
+6. 玩得开心！
 
 在本次demo中，我们支持了3个核心业务场景的4个核心风控API，覆盖了抖音目前最强的风控场景：
 * 一般场景：
