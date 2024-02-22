@@ -130,8 +130,8 @@ def encrypt_get_seed(dev_info):
     if response.status_code == 200:
         obj = json.loads(response.text)
         data = obj["data"]
-        printf(f'Token body: {data}')
-        return base64.b64decode(data)
+        printf(f'Seed body: {data}')
+        return base64.b64decode(data).hex()
 
 
 def encrypt_get_report(dev_info):
