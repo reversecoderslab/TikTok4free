@@ -45,17 +45,17 @@ if __name__ == "__main__":
 
     device = DeviceRegister(proxy=proxy, session=session)
 
-    timestamp_ms = round(time.time() * 1000)
-    timestamp = timestamp_ms // 1000
-    dev_info['launchFirstTime'] = str(timestamp)
-
     printf(f'\n==== START GET DEVICE TEMPLATE ====')
     device.process_dev_info()
+    dev_info = device.dev_info
     printf(f'\n==== END GET DEVICE TEMPLATE ====')
+
+    timestamp_ms = round(time.time() * 1000)
+    dev_info['launchFirstTime'] = str(timestamp_ms)
+    dev_info['installTime'] = str(timestamp_ms // 1000)
 
     printf(f'\n==== START REGISTER DEVICE ====')
     r = device.post_device_register()
-    dev_info = device.dev_info
     dev_info["installId"] = device.install_id
     dev_info["deviceId"] = device.device_id
     if dev_info["installId"] and dev_info["deviceId"] == 0 or dev_info["installId"] and dev_info["deviceId"] == '' or \
@@ -64,6 +64,10 @@ if __name__ == "__main__":
         raise ('Device not registered')
     dev_info['cookies'] = cookie_to_str(r.cookies.get_dict(), None)
     printf(f'\n==== END REGISTER DEVICE ====')
+
+    printf(f'\n==== START APP ALERT CHECK ====')
+    device.send_app_alert_check()
+    printf(f'\n==== END APP ALERT CHECK ====')
 
     printf("\n==== START GET SEED ====")
     obj = device.get_seed()
@@ -75,18 +79,31 @@ if __name__ == "__main__":
         raise ('No seed')
     printf("\n==== END GET SEED ====")
 
-    printf(f'\n==== START APP ALERT CHECK ====')
-    device.send_app_alert_check()
-    printf(f'\n==== END APP ALERT CHECK ====')
-
     printf(f'\n==== START GET SEC DEV ID ====')
     token = device.get_token()
     printf(f'\n==== END GET SEC DEV ID ====')
 
     printf(f"\n==== START RI REPORT ====")
     dev_info["secDeviceIdToken"] = token
+    dev_info['reportString'] = "install"
     device.post_ri_report()
     printf("\n==== END ri/report ====")
+
+    printf(f"\n==== START RI REPORT ====")
+    dev_info['reportString'] = "logged"
+    device.post_ri_report()
+    printf("\n==== END ri/report ====")
+
+    printf(f"\n==== START RI REPORT ====")
+    dev_info['reportString'] = "cold_start"
+    device.post_ri_report()
+    printf("\n==== END ri/report ====")
+
+    printf(f"\n==== START RI REPORT ====")
+    dev_info['reportString'] = "autoReport"
+    device.post_ri_report()
+    printf("\n==== END ri/report ====")
+
 
     printf("\n==== START DEVICE INFO ====")
     printf(dev_info)
