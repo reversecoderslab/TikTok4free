@@ -52,6 +52,10 @@ Web: http://tt-free.com <br>
 
 ## Release Notes: 发行说明:
 
+02/22/24:
+
+- Update app version to 33.6.1 将应用程序版本更新至33.6.1
+
 02/05/24:
 
 - Update app version to 33.3.4 将应用程序版本更新至33.3.4
