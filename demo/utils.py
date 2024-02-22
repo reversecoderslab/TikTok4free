@@ -43,6 +43,11 @@ def rand_str(length):
         rand += random.choice(random_str)
     return rand
 
+def mssdk_id_str():
+    return f"b{gen_rnd()}{gen_rnd()}ed{gen_rnd()}{gen_rnd()}{gen_rnd()}-0e0b-{gen_rnd()}{gen_rnd()}{gen_rnd()}a-b{gen_rnd()}c{gen_rnd()}-{gen_rnd()}{gen_rnd()}{gen_rnd()}d{gen_rnd()}af{gen_rnd()}fcaf"
+
+def gen_rnd():
+    return random.randint(0,9)
 
 def fix_json(json_string):
     json_string = json_string.replace('"', '\\"')
