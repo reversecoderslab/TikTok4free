@@ -9,7 +9,7 @@ from api import do_get_dev_tmpl, get_device_register_body, do_sign_v5, gen_local
     encrypt_get_seed, decrypt_get_seed, encrypt_get_report
 from domains import DOMAIN_APPLOG, DOMAIN_MSSDK, DOMAIN_NORMAL
 from request_params import generate_url_common_params, generate_common_header_info
-from utils import rand_str, post_request, get_request, to_query_str, printf
+from utils import rand_str, post_request, get_request, to_query_str, printf, mssdk_id_str
 
 
 class DeviceRegister:
@@ -34,9 +34,12 @@ class DeviceRegister:
         self.dev_info["androidId"] = rand_str(20)
         self.dev_info["gaId"] = str(uuid1())
         self.dev_info["reqId"] = str(uuid1())
-        self.dev_info["IMEI"] = str(random.randint(300000000000000, 394601551608653))
+        self.dev_info["IMEI"] = ''.join(random.choices(self.dev_info["IMEI"], k=12)).lower()
         self.dev_info["mac"] = ':'.join([f'{random.randint(0, 255):02X}' for _ in range(6)])
-        self.dev_info["mssdkId"] = str(uuid4())
+        self.dev_info["mssdkId"] = mssdk_id_str()
+        timestamp_ms = round(time.time() * 1000)
+        timestamp = timestamp_ms // 1000
+        self.dev_info["bootTimeUTC"] = str(timestamp)
 
         dev_locals = gen_locals(self.proxy)["data"]
 
@@ -290,8 +293,13 @@ class DeviceRegister:
                                                                       req_url=req_url,
                                                                       body=body)
         header = generate_common_header_info(self.dev_info) | {
-            "x-tt-dm-status": "login=0;ct=0;rt=7",
             "content-type": "application/x-www-form-urlencoded",
+            "accept-encoding": "gzip",
+            "x-tt-request-tag": "t=0;n=1",
+            "x-tt-dm-status": "login=1;ct=1;rt=1",
+            "accept": "*/*",
+            "x-vc-bdturing-sdk-version": "2.3.6.i18n",
+            "x-bd-kmsv": "0",
             "user-agent": self.dev_info["userAgent"],
             "x-ss-stub": x_ss_stub,
             'X-Khronos': x_khronos,
@@ -335,14 +343,19 @@ class DeviceRegister:
         }
         query_args_str = to_query_str(query_args)
         req_url = f"{host}{url}?{query_args_str}{'&sdkid&subaid&bd_did'}"
-        body = encrypt_get_seed(self.dev_info)
+        body = bytes.fromhex(encrypt_get_seed(self.dev_info))
         x_ladon, x_argus, x_gorgon, x_khronos, x_ss_stub = do_sign_v5(dev_info=self.dev_info,
                                                                       timestamp=timestamp,
                                                                       req_url=req_url,
                                                                       body=body)
+    
         header = generate_common_header_info(self.dev_info) | {
+            "accept-encoding": "gzip",
+            "accept": "*/*",
+            "x-vc-bdturing-sdk-version": "2.3.6.i18n",
+            "x-tt-request-tag": "t=0;n=1",
             "x-tt-dm-status": "login=0;ct=0;rt=7",
-            "content-type": "application/x-www-form-urlencoded",
+            "content-type": "application/octet-stream",
             "user-agent": self.dev_info["userAgent"],
             "x-ss-stub": x_ss_stub,
             'X-Khronos': x_khronos,
@@ -391,9 +404,13 @@ class DeviceRegister:
                                                                       req_url=req_url,
                                                                       body=body)
         header = generate_common_header_info(self.dev_info) | {
-            "x-tt-dm-status": "login=0;ct=1;rt=6",
-            "content-type": "application/octet-stream",
-            "user-agent": "ByteDance-MSSDK",
+            "content-type": "application/x-www-form-urlencoded",
+            "accept-encoding": "gzip",
+            "x-tt-request-tag": "t=0;n=0",
+            "x-tt-dm-status": "login=1;ct=1;rt=1",
+            "accept": "*/*",
+            "x-vc-bdturing-sdk-version": "2.3.6.i18n",
+            "x-bd-kmsv": "0",
             "x-ss-stub": x_ss_stub,
             'X-Khronos': x_khronos,
             'X-Gorgon': x_gorgon,
