@@ -52,6 +52,34 @@ Web: http://tt-free.com <br>
 
 ## Release Notes: 发行说明:
 
+03/08/24:
+
+🔥 Big announcement 🔥
+
+Since March 8, 2024 we support the following TikTok versions:
+
+- TikTok iOS
+- TikTok Android
+- TikTok Now
+- TikTok Lite
+
+On RapidApi you have access to the fastest, most stable and reliable TikTok iOS device registration process on the market.
+
+Access to the above-mentioned TikTok versions is only possible with an individual subscription. Please contact us on Telegram: https://t.me/reversecoders
+
+🔥重大公告🔥
+
+自 2024 年 3 月 8 日起，我們支援以下 TikTok 版本：
+
+- 抖音 iOS
+- 抖音安卓版
+- 抖音現在
+- TikTok精簡版
+
+在 RapidApi 上，您可以存取市場上最快、最穩定、最可靠的 TikTok iOS 裝置註冊流程。
+
+只有單獨訂閱才能存取上述 TikTok 版本。 請透過 Telegram 與我們聯絡：https://t.me/reversecoders
+
 03/04/24:
 
 - Update app version to 33.7.3 将应用程序版本更新至33.7.3
