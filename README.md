@@ -1,4 +1,4 @@
-# TikTok API - (Discord server: https://discord.gg/qDDSzY9TPP)
+# TikTok API - (Support: https://t.me/reversecoders)
 Highly maintained, up-to-date and cheapest TikTok signature/encryption service, stably 24/7 support with an average of millions of calls per day.
 高度维护、最新且最便宜的 TikTok 签名/加密服务，稳定的 24/7 支持，平均每天数百万次调用。
 
@@ -63,7 +63,7 @@ Since March 8, 2024 we support the following TikTok versions:
 - TikTok Now
 - TikTok Lite
 
-On RapidApi you have access to the fastest, most stable and reliable TikTok iOS device registration process on the market.
+On RapidApi you have access to the fastest, most stable and reliable TikTok Android device registration process on the market.
 
 Access to the above-mentioned TikTok versions is only possible with an individual subscription. Please contact us on Telegram: https://t.me/reversecoders
 
@@ -76,9 +76,14 @@ Access to the above-mentioned TikTok versions is only possible with an individua
 - 抖音現在
 - TikTok精簡版
 
-在 RapidApi 上，您可以存取市場上最快、最穩定、最可靠的 TikTok iOS 裝置註冊流程。
+在 RapidApi 上，您可以存取市場上最快、最穩定、最可靠的 TikTok Android 裝置註冊流程。
 
 只有單獨訂閱才能存取上述 TikTok 版本。 請透過 Telegram 與我們聯絡：https://t.me/reversecoders
+
+05/09/2024:
+
+- Update app version to 34.7.15 将应用程序版本更新至34.7.15
+- Update MSSDK version to v05.00.07-alpha.2-ov-android 将MSSDK版本更新为v05.00.07-alpha.2-ov-android
 
 03/04/24:
 
@@ -101,7 +106,7 @@ Access to the above-mentioned TikTok versions is only possible with an individua
 
 - Update app version to 33.2.3 将应用程序版本更新至33.2.3
 - Update MSSDK version to v05.00.05-alpha.10-ov-android 将MSSDK版本更新为v05.00.05-alpha.10-ov-android
-  
+
 01/21/24:
 
 - Update app version to 33.1.4 将应用程序版本更新至33.1.4
