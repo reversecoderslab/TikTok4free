@@ -13,14 +13,15 @@ from utils              import printf
 
 if __name__ == "__main__":
     # -------- START ONLY CHANGE HERE -------- #
-    proxy   = None
-    # username    = ""
-    # password    = ""
-    # token       = ''.join(choices('0123456789abcdefghiklmnopqrstuvwxyz', k=8))
-    # proxy       = f'username:password_country-{random.choice(["de", "cz", "es", "it"])}_session-{token}_lifetime-5m@geo.iproyal.com:12321'
 
     # NOTE: If you change country, please also change the domains inside domains.py!
-    country = 'de'
+    proxy       = None
+    #username    = ""
+    #password    = ""
+    country     = 'de'
+    #token       = ''.join(choices('0123456789abcdefghiklmnopqrstuvwxyz', k=8))
+    #proxy       = f'{username}:{password}_country-{country}_session-{token}_lifetime-5m@geo.iproyal.com:12321'
+
     # -------- END ONLY CHANGE HERE -------- #
 
     session = requests.Session()
