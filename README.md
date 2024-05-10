@@ -52,6 +52,11 @@ Web: http://tt-free.com <br>
 
 ## Release Notes: 发行说明:
 
+05/09/2024:
+
+- Update app version to 34.7.15 将应用程序版本更新至34.7.15
+- Update MSSDK version to v05.00.07-alpha.2-ov-android 将MSSDK版本更新为v05.00.07-alpha.2-ov-android
+
 03/08/24:
 
 🔥 Big announcement 🔥
@@ -79,11 +84,6 @@ Access to the above-mentioned TikTok versions is only possible with an individua
 在 RapidApi 上，您可以存取市場上最快、最穩定、最可靠的 TikTok Android 裝置註冊流程。
 
 只有單獨訂閱才能存取上述 TikTok 版本。 請透過 Telegram 與我們聯絡：https://t.me/reversecoders
-
-05/09/2024:
-
-- Update app version to 34.7.15 将应用程序版本更新至34.7.15
-- Update MSSDK version to v05.00.07-alpha.2-ov-android 将MSSDK版本更新为v05.00.07-alpha.2-ov-android
 
 03/04/24:
 
