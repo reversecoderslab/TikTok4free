@@ -2,7 +2,7 @@ from request_params import *
 from api import *
 
 
-def tt_common_post_request(session, dev_info, account_info, host, url, body=None):
+def tt_common_post_request(session, dev_info, account_info, host, url, body=None, extra=None):
     """
 
     :param session:
@@ -13,7 +13,7 @@ def tt_common_post_request(session, dev_info, account_info, host, url, body=None
     :param body:
     :return:
     """
-    url_params = generate_url_common_params(dev_info)
+    url_params = generate_url_common_params(dev_info, extra if extra else None)
     query_str = f"{host}{url}?{url_params}"
 
     timestamp_ms = round(time.time() * 1000)
