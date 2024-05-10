@@ -11,6 +11,7 @@ def tt_common_post_request(session, dev_info, account_info, host, url, body=None
     :param host:
     :param url:
     :param body:
+    :param extra:
     :return:
     """
     url_params = generate_url_common_params(dev_info, extra if extra else None)
