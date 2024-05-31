@@ -85,6 +85,11 @@ Access to the above-mentioned TikTok versions is only possible with an individua
 
 只有單獨訂閱才能存取上述 TikTok 版本。 請透過 Telegram 與我們聯絡：https://t.me/reversecoders
 
+05/31/24:
+
+- Update app version to 35.0.2 将应用程序版本更新至35.0.2
+- Update MSSDK version to v05.00.08-alpha.2-ov-android 将MSSDK版本更新为v05.00.08-alpha.2-ov-android
+
 03/04/24:
 
 - Update app version to 33.7.3 将应用程序版本更新至33.7.3
