@@ -51,6 +51,18 @@ def get_device_register_body(dev_info):
     printf(f"Device register body: {data}")
     return data
 
+def get_hashed_id(value):
+    url, payload, headers = get_api_common_params("get_hashed_id")
+    payload = json.dumps(payload | {
+        "value": value
+    })
+    response = requests.request("POST", url, headers=headers, data=payload)
+    time.sleep(1)
+
+    data = json.loads(response.text)["data"]
+    printf(f"Hashed id: {data}")
+    return data
+
 
 def do_sign_v5(dev_info, timestamp: int, req_url: str, body=None):
     """
