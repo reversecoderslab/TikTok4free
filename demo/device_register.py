@@ -191,7 +191,7 @@ class DeviceRegister:
 
     def send_passport_region(self, value):
         """
-        Send device trust users
+        Send passport region
         """
         host = DOMAIN_NORMAL
         url = "/passport/app/region/"
