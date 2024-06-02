@@ -3,7 +3,7 @@ import binascii
 import json
 import time
 
-from api            import do_get_dev_tmpl, get_device_register_body, do_sign_v5, encrypt_get_token, decrypt_get_token, encrypt_get_seed, decrypt_get_seed, encrypt_get_report, encrypt_get_setting
+from api            import do_get_dev_tmpl, get_device_register_body, do_sign_v5, encrypt_get_token, decrypt_get_token, encrypt_get_seed, decrypt_get_seed, encrypt_get_report, encrypt_get_setting, get_hashed_id
 from domains        import DOMAIN_APPLOG, DOMAIN_MSSDK, DOMAIN_NORMAL
 from request_params import generate_url_common_params
 from utils          import post_request, get_request, to_query_str, printf, cookie_string, cookie_json, get_trace_id
@@ -154,6 +154,58 @@ class DeviceRegister:
         timestamp = timestamp_ms // 1000
 
         body = "last_sec_user_id=&d_ticket=&last_login_way=-1&last_login_time=0&last_login_platform="
+
+        x_ladon, x_argus, x_gorgon, x_khronos, x_ss_stub = do_sign_v5(timestamp=timestamp, req_url=req_url,
+                                                                      dev_info=self.dev_info, body=body)
+        headers = {
+            "accept-encoding": "gzip",
+            "x-tt-app-init-region": f"carrierregion={self.dev_info['geo']['region']};mccmnc={self.dev_info['geo']['mcc_mnc']};sysregion={self.dev_info['geo']['region']};appregion={self.dev_info['geo']['region']}",
+            "log-encode-type": "gzip",
+            "x-tt-dm-status": "login=0;ct=0;rt=7",
+            "x-tt-request-tag": "t=0;n=1",
+            "x-ss-req-ticket": str(round(time.time() * 1000)),
+            "sdk-version": "2",
+            "passport-sdk-version": "6010290",
+            "x-vc-bdturing-sdk-version": "2.3.7.i18n",
+            "user-agent": self.dev_info['extra']['userAgent'],
+            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "host": self.dev_info['geo']['domain_normal'].split('//')[1],
+            "connection": "Keep-Alive",
+            "cookie": cookie_string(self.dev_info['extra']['cookies']),
+            "x-tt-trace-id": get_trace_id(self.dev_info['app']['appId'], self.dev_info['device']['deviceId']),
+            "x-ss-stub": x_ss_stub,
+            'X-Khronos': x_khronos,
+            'X-Gorgon': x_gorgon,
+            "X-Argus": x_argus,
+            "X-Ladon": x_ladon
+        }
+
+        response = post_request(self.session, req_url, headers, body)
+        if not response.cookies:
+            pass
+        else:
+            cookies_dict = cookie_json(response)
+            self.dev_info['extra']['cookies'].update(json.loads(json.dumps(cookies_dict, indent=4)))
+        obj = json.loads(response.text)
+        printf(str(obj))
+
+    def send_passport_region(self, value):
+        """
+        Send device trust users
+        """
+        host = DOMAIN_NORMAL
+        url = "/passport/app/region/"
+        extra = {
+            "support_webview": "1",
+        }
+
+        query_args_str = generate_url_common_params(self.dev_info, extra=extra)
+        req_url = f"{host}{url}?{query_args_str}"
+
+        timestamp_ms = round(time.time() * 1000)
+        timestamp = timestamp_ms // 1000
+
+        body = f"hashed_id={get_hashed_id(value)}&type=1"
 
         x_ladon, x_argus, x_gorgon, x_khronos, x_ss_stub = do_sign_v5(timestamp=timestamp, req_url=req_url,
                                                                       dev_info=self.dev_info, body=body)
