@@ -43,7 +43,7 @@ def generate_url_common_params(dev_info, extra={}):
         'region': dev_info['geo']['region'],
         'ts': ts // 1000,
         'cdid': dev_info['device']['cdid'],
-        'okhttp_version': dev_info['app']['ttnetVersion'],
+        'okhttp_version': dev_info['app']['ttnet_version'],
         'use_store_region_cookie': '1'
     }
     return urllib.parse.urlencode(url_params | extra)
