@@ -42,7 +42,8 @@ def do_get_dev_tmpl(proxy, country):
 def get_device_register_body(dev_info):
     url, payload, headers = get_api_common_params("get_device_register_body")
     payload = json.dumps(payload | {
-        "dev_info": dev_info
+        "dev_info": dev_info,
+        "country": dev_info['geo']['region'].lower()
     })
     response = requests.request("POST", url, headers=headers, data=payload)
     time.sleep(1)
