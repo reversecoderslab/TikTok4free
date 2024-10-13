@@ -52,6 +52,11 @@ Web: http://tt-free.com <br>
 
 ## Release Notes: 发行说明:
 
+10/13/24:
+
+- Update app version to 36.9.1 更新应用程序版本至 36.9.1
+- Update MSSDK version to v05.01.02-alpha.7-ov-android 更新 MSSDK 版本至 v05.01.02-alpha.7-ov-android
+
 06/06/24:
 
 - Update app version to 35.1.2 将应用程序版本更新至35.1.2
