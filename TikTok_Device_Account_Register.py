@@ -32,7 +32,11 @@ host        = 'http://86.48.3.49:9137'
 country     = 'de'
 proxy       = 'username:password@host:ip'
 x_user_id   = 'x_user_id'
+
 number      = "+490000000000"
+
+e_mail      = ""
+password    = ""
 
 
 def register_user():
@@ -119,6 +123,8 @@ def register_account():
     payload = json.dumps({
         "device": device,
         "proxy": proxy,
+        "e_mail": e_mail,
+        "password": password
     })
     headers = {
         'X-User-ID': x_user_id,
@@ -130,6 +136,75 @@ def register_account():
     if int(response['code']) == 200:
         with open(f"{country}_accounts.txt", 'a') as file:
             file.write(f"{json.dumps(response['data'])}\n")
+
+
+def update_token():
+    url = f"{host}/update_token"
+
+    filename = f"{country}_devices.txt"
+    with open(filename, "r") as file:
+        random_line = random.choice(file.read().splitlines())
+
+    device = json.loads(random_line)
+
+    payload = json.dumps({
+        "device": device,
+        "proxy": proxy,
+    })
+    headers = {
+        'X-User-ID': x_user_id,
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload).json()
+
+    print(response)
+
+
+def update_seed():
+    url = f"{host}/update_seed"
+
+    filename = f"{country}_devices.txt"
+    with open(filename, "r") as file:
+        random_line = random.choice(file.read().splitlines())
+
+    device = json.loads(random_line)
+
+    payload = json.dumps({
+        "device": device,
+        "proxy": proxy,
+    })
+    headers = {
+        'X-User-ID': x_user_id,
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload).json()
+
+    print(response)
+
+
+def update_report():
+    url = f"{host}/update_report"
+
+    filename = f"{country}_devices.txt"
+    with open(filename, "r") as file:
+        random_line = random.choice(file.read().splitlines())
+
+    device = json.loads(random_line)
+
+    payload = json.dumps({
+        "device": device,
+        "proxy": proxy,
+    })
+    headers = {
+        'X-User-ID': x_user_id,
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload).json()
+
+    print(response)
 
 
 if __name__ == '__main__':
