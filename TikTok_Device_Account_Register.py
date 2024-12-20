@@ -149,7 +149,7 @@ def update_token():
 
     payload = json.dumps({
         "device": device,
-        "proxy": proxy,
+        "proxy": proxy
     })
     headers = {
         'X-User-ID': x_user_id,
@@ -172,7 +172,7 @@ def update_seed():
 
     payload = json.dumps({
         "device": device,
-        "proxy": proxy,
+        "proxy": proxy
     })
     headers = {
         'X-User-ID': x_user_id,
