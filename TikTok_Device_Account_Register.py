@@ -107,8 +107,34 @@ def send_sms():
     print(response.text)
 
 
+def register_account():
+    url = f"{host}/register_account"
+
+    filename = f"{country}_devices.txt"
+    with open(filename, "r") as file:
+        random_line = random.choice(file.read().splitlines())
+
+    device = json.loads(random_line)
+
+    payload = json.dumps({
+        "device": device,
+        "proxy": proxy,
+    })
+    headers = {
+        'X-User-ID': x_user_id,
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload).json()
+
+    if int(response['code']) == 200:
+        with open(f"{country}_accounts.txt", 'a') as file:
+            file.write(f"{json.dumps(response['data'])}\n")
+
+
 if __name__ == '__main__':
     #register_user()
     #balance()
     register_device()
-    send_sms()
+    #send_sms()
+    register_account()
