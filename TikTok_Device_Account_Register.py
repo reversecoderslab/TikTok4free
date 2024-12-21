@@ -28,7 +28,7 @@ import json
 import random
 
 
-host        = 'http://86.48.3.49:9137'
+host        = 'http://162.244.29.181:9137'
 country     = 'de'
 proxy       = 'username:password@host:ip'
 x_user_id   = 'x_user_id'
